@@ -1,6 +1,7 @@
 using System;
 using Gtk;
 using Parse;
+using System.Threading.Tasks;
 
 public partial class MainWindow: Gtk.Window
 {
@@ -20,11 +21,22 @@ public partial class MainWindow: Gtk.Window
 		var testObject = new ParseObject ("Post");
 		testObject ["title"] = this.postText.Text;
 		testObject ["body"] = this.postBody.Buffer.Text;
-		await testObject.SaveAsync ();
-		clearInputs ();
+		Task saveTask = testObject.SaveAsync ();
+		IndicateAsSending ();
+
+		await saveTask;
+		IndicateAsFinishSending ();
 	}
 
-	private void clearInputs()
+	private void IndicateAsSending(){
+		this.postBody.Buffer.Text += " \n sending ...";
+	}
+
+	private void IndicateAsFinishSending(){
+		ClearInputs ();
+	}
+
+	private void ClearInputs()
 	{
 		this.postText.Text = "";
 		this.postBody.Buffer.Clear ();
