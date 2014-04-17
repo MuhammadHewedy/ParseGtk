@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseGtk#", "ParseGtk#\ParseGtk#.csproj", "{BA75F5CF-C25F-442E-BDF5-BA8B9682BF50}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{38B50C03-2C73-4320-8AFA-DEA820C83CA2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +18,8 @@ Global
 		{BA75F5CF-C25F-442E-BDF5-BA8B9682BF50}.Debug|x86.Build.0 = Debug|x86
 		{BA75F5CF-C25F-442E-BDF5-BA8B9682BF50}.Release|x86.ActiveCfg = Release|x86
 		{BA75F5CF-C25F-442E-BDF5-BA8B9682BF50}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = ParseGtk#\ParseGtk#.csproj
